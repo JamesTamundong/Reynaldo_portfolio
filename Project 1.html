@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NextGen Marketing Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --main: #232946;
+            --accent: #eebbc3;
+            --bg: #f7f7f7;
+            --card: #fff;
+            --text: #232946;
+            --button: #232946;
+            --button-hover: #eebbc3;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: var(--main);
+            color: var(--accent);
+            padding: 36px 0 18px 0;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(35,41,70,0.08);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 18px;
+        }
+        nav ul li a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #fff;
+        }
+        main {
+            max-width: 950px;
+            margin: 40px auto;
+            background: var(--card);
+            padding: 36px 28px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(35,41,70,0.07);
+        }
+        section {
+            margin-bottom: 38px;
+        }
+        h2 {
+            color: var(--main);
+            margin-bottom: 16px;
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 28px;
+            margin-top: 18px;
+        }
+        .service-card {
+            background: var(--bg);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(35,41,70,0.06);
+            padding: 26px 18px;
+            text-align: left;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 6px solid var(--accent);
+        }
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(35,41,70,0.13);
+            border-left: 6px solid var(--main);
+        }
+        .service-card h3 {
+            margin: 0 0 12px 0;
+            color: var(--main);
+            font-size: 1.25em;
+        }
+        .service-card p {
+            font-size: 1em;
+            color: #444;
+        }
+        .about {
+            background: var(--bg);
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 2px 8px rgba(35,41,70,0.05);
+            font-size: 1.13em;
+            color: #222;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .cta .button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--button);
+            color: var(--accent);
+            border-radius: 8px;
+            font-size: 1.15em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px rgba(35,41,70,0.08);
+            border: 2px solid var(--accent);
+        }
+        .cta .button:hover {
+            background: var(--accent);
+            color: var(--main);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 420px;
+            margin: 0 auto;
+            margin-top: 22px;
+        }
+        input, textarea, button {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        button[type="submit"] {
+            background: var(--main);
+            color: var(--accent);
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s, color 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: var(--accent);
+            color: var(--main);
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 1em;
+        }
+        .contact-info a {
+            color: var(--main);
+            text-decoration: none;
+            margin-right: 16px;
+            font-weight: 500;
+        }
+        .contact-info a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: var(--main);
+            color: var(--accent);
+            font-size: 1em;
+            margin-top: 44px;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 14px 4px;
+            }
+            .services-list {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NextGen Marketing Agency</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="services">
+            <h2>What We Offer</h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <h3>Digital Strategy</h3>
+                    <p>We craft data-driven digital strategies that help your business grow and adapt in a fast-changing market.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Brand Identity</h3>
+                    <p>Build a memorable brand with our creative design, messaging, and positioning services.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Influencer Marketing</h3>
+                    <p>Connect with top influencers to amplify your reach and credibility in your niche.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Paid Advertising</h3>
+                    <p>Maximize ROI with targeted ads on Google, Facebook, Instagram, and more.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Analytics & Reporting</h3>
+                    <p>Track your success with clear, actionable analytics and monthly performance reports.</p>
+                </div>
+            </div>
+            <div class="cta">
+                <a class="button" href="#contact">Let's Work Together</a>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About NextGen</h2>
+            <div class="about">
+                <p>
+                    NextGen Marketing Agency is a forward-thinking team of strategists, creatives, and analysts. 
+                    We believe in blending innovation with proven marketing principles to deliver results that matter. 
+                    Our approach is collaborative, transparent, and always focused on your goals.
+                </p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/xrbadnvk" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <span>Or connect with us:</span>
+                <a href="mailto:nextgen@email.com">Email</a>
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="tel:+1234567890">Call</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 NextGen Marketing Agency. All rights reserved.
+    </footer>
+</body>
+</html>

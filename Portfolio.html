@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .profile-img {
+            display: block;
+            margin: 30px auto 10px auto;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 4px solid #fff;
+        }
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.95);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .intro {
+            background: #0a0a0a;
+            color: #eceaea;
+            font-size: 2.5em;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .about {
+            background: #fff;
+            color: #000;
+            font-size: 1.2em;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .projects, .links, .contact-info {
+            margin: 30px 0;
+        }
+        .projects ul, .links ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .projects li, .links li {
+            margin: 10px 0;
+        }
+        .projects a, .links a, .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .projects a:hover, .links a:hover, .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-info img {
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+        .contact-info {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        input, textarea, button {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        button {
+            background: #4facfe;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #00f2fe;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 15px 5px;
+            }
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            .intro {
+                font-size: 1.5em;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my portfolio</h1>
+    </header>
+    <main>
+        <img class="profile-img" src="https://pbs.twimg.com/profile_images/1958811858577891329/R3te3iUS_400x400.jpg" alt="Reynaldo Caparas III Profile Photo">
+        <div class="intro">Hello! I'm <b>Reynaldo Caparas III</b>, a passionate web developer.</div>
+        <section class="projects">
+            <h2>My Projects</h2>
+            <ul>
+                <li><a href="Project 1.html">Project 1</a></li>
+                <li><a href="Project 2.html">Project 2</a></li>
+            </ul>
+        </section>
+        <section class="links">
+            <h2>More About Me</h2>
+            <ul>
+                <li><a href="Skills1.html">My Skills</a></li>
+                <li><a href="about me.html">About Me</a></li>
+            </ul>
+        </section>
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <a href="https://www.linkedin.com/in/reynaldo-caparas-b7a7b4379/">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&s" width="20" alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100091768347392">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Logo_de_Facebook.png/1028px-Logo_de_Facebook.png" width="20" alt="Facebook"> Facebook
+            </a>
+            <a href="https://x.com/Ca8989Reynaldo">
+                <img src="https://icon2.cleanpng.com/20240119/phb/transparent-x-icon-black-and-white-x-in-the-1710888893456.webp" width="22" alt="X"> X
+            </a>
+            <a href="https://www.instagram.com/onisukangbinilad/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png" width="20" alt="Instagram"> Instagram
+            </a>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="my-form" action="https://formspree.io/f/xrbadnvk" method="POST" enctype="multipart/form-data">
+                <label for="email">Your Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" required></textarea>
+                <label for="upload">Attach a file (optional):</label>
+                <input type="file" name="upload" id="upload">
+                <button type="submit" id="my-form-button">Send</button>
+                <p id="my-form-status"></p>
+            </form>
+        </section>
+    </main>
+    <footer>© 2025 Dev Portfolio. All rights reserved.</footer>
+    <!-- Formspree Formbutton floating widget -->
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+      formbutton("create", {
+        action: "https://formspree.io/f/xrbadnvk",
+        title: "How can we help?",
+        fields: [
+          { type: "email", label: "Email:", name: "email", required: true, placeholder: "your@email.com" },
+          { type: "textarea", label: "Message:", name: "message", placeholder: "What's on your mind?" },
+          { type: "submit" }
+        ],
+        styles: {
+          title: { backgroundColor: "gray" },
+          button: { backgroundColor: "gray" }
+        }
+      });
+    </script>
+    <!-- AJAX form submission -->
+    <script>
+      var form = document.getElementById("my-form");
+      form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset();
+          } else {
+            response.json().then(data => {
+              if (Object.hasOwn(data, 'errors')) {
+                status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+              } else {
+                status.innerHTML = "Oops! There was a problem submitting your form";
+              }
+            });
+          }
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form";
+        });
+      });
+    </script>
+</body>
+</html>

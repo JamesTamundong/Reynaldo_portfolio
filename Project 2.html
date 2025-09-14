@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bright Marketing Agency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary: #007bff;
+            --secondary: #00f2fe;
+            --accent: #4facfe;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            color: #fff;
+            padding: 40px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        header h1 {
+            font-size: 2.7em;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 0 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #ffe082;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        }
+        section {
+            margin-bottom: 36px;
+        }
+        h2 {
+            color: var(--primary);
+            margin-bottom: 14px;
+            font-size: 2em;
+        }
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            margin-top: 18px;
+        }
+        .service-card {
+            background: var(--bg);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 22px 18px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .service-card h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent);
+            font-size: 1.2em;
+        }
+        .service-card p {
+            font-size: 1em;
+            color: #444;
+        }
+        .about {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            font-size: 1.1em;
+            color: #222;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .cta .button {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .cta .button:hover {
+            background: var(--accent);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 18px;
+        }
+        input, textarea, button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        button[type="submit"] {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: var(--accent);
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 1em;
+        }
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            margin-right: 14px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 18px 0;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            color: #fff;
+            font-size: 1em;
+            margin-top: 40px;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 12px 4px;
+            }
+            .services-list {
+                flex-direction: column;
+                gap: 14px;
+            }
+            .service-card {
+                width: 100%;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bright Marketing Agency</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <h3>Social Media Marketing</h3>
+                    <p>Grow your brand and engage your audience on all major platforms with creative campaigns.</p>
+                </div>
+                <div class="service-card">
+                    <h3>SEO Optimization</h3>
+                    <p>Boost your website’s visibility and ranking on search engines to attract more customers.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Email Marketing</h3>
+                    <p>Reach your clients directly with personalized and effective email campaigns.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Content Creation</h3>
+                    <p>Professional content writing, graphics, and video production to tell your story.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Brand Strategy</h3>
+                    <p>Develop a unique brand identity and strategy to stand out in your market.</p>
+                </div>
+            </div>
+            <div class="cta">
+                <a class="button" href="#contact">Get Started</a>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about">
+                <p>
+                    Bright Marketing Agency is a team of creative professionals dedicated to helping businesses shine online. 
+                    With years of experience in digital marketing, we deliver innovative strategies tailored to your goals. 
+                    Our mission is to empower brands, drive growth, and build lasting relationships with your audience.
+                </p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/xrbadnvk" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <span>Or reach us on:</span>
+                <a href="mailto:brightagency@email.com">Email</a>
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://www.facebook.com/">Facebook</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Bright Marketing Agency. All rights reserved.
+    </footer>
+</body>
+</html>

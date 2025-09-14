@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About Me</title>
+  <style>
+    :root{
+      --bg:#2f3742;
+      --card:#ffffff;
+      --accent:#6c5ce7;
+      --skin:#f6b7a8;
+      --hair:#0b1020;
+      --muted:#a6a6a6;
+      --panel:#2b3946;
+      --shadow: rgba(11,16,32,0.25);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);padding:40px}
+
+    .scene{
+      width:420px;
+      max-width:95vw;
+      background:linear-gradient(180deg,#27323b 0%, #2f3946 100%);
+      border-radius:18px;
+      padding:28px;
+      box-shadow: 0 10px 30px var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .canvas{
+      display:flex;gap:18px;align-items:flex-start;
+    }
+
+    .left{
+      width:52%;
+      display:flex;flex-direction:column;gap:14px;align-items:flex-start;
+    }
+
+    .monitor{
+      width:100%;height:120px;border-radius:10px;background:var(--panel);padding:12px;display:flex;flex-direction:column;gap:10px;justify-content:center;
+    }
+    .monitor .thumb{display:flex;gap:10px;align-items:center}
+    .thumb .img{width:56px;height:36px;background:linear-gradient(90deg,#394a57,#2b3946);border-radius:6px}
+    .thumb .lines{flex:1}
+    .lines .line{height:8px;background:linear-gradient(90deg,#3f4f5d,#2f3d4a);border-radius:6px;margin-bottom:8px}
+    .small-row{display:flex;gap:8px;margin-top:6px}
+    .chip{height:8px;width:28%;background:#1f2a32;border-radius:6px}
+
+    .chat-bubble{align-self:flex-start;background:#3b4a57;padding:10px 14px;border-radius:12px;color:#e6eef6;font-size:13px;max-width:86%}
+
+    .right{width:48%;display:flex;justify-content:center;align-items:flex-start}
+    .character{width:160px;height:200px;position:relative}
+    .torso{position:absolute;left:50%;transform:translateX(-50%);bottom:16px;width:120px;height:110px;border-radius:22px 22px 18px 18px;background:var(--accent);display:flex;align-items:flex-end;justify-content:center}
+    .arm{position:absolute;bottom:34px;height:14px;width:48px;border-radius:10px;background:var(--skin)}
+    .arm.left{left:10px;transform:rotate(-18deg)}
+    .arm.right{right:10px;transform:rotate(18deg)}
+    .neck{position:absolute;left:50%;transform:translateX(-50%);bottom:126px;width:34px;height:22px;background:var(--skin);border-radius:8px}
+    .head{position:absolute;left:50%;transform:translateX(-50%);bottom:146px;width:92px;height:92px;background:var(--skin);border-radius:48px 48px 44px 44px}
+    .hair{position:absolute;left:50%;transform:translateX(-50%);bottom:170px;width:96px;height:60px;background:var(--hair);border-radius:50px 50px 36px 36px}
+    .desk{position:absolute;left:16px;right:16px;bottom:0;height:28px;background:linear-gradient(90deg,#233038,#1e2a32);border-radius:8px}
+    .keyboard{position:absolute;left:calc(50% - 56px);bottom:8px;height:10px;width:112px;background:linear-gradient(90deg,#2b3a44,#1c252b);border-radius:6px}
+    .splash{position:absolute;right:-20px;top:10px;background:#3b4a57;padding:10px 12px;border-radius:10px;color:#e6eef6;font-size:13px}
+
+    @media (max-width:500px){
+      .scene{padding:18px}
+      .canvas{flex-direction:column}
+      .left,.right{width:100%}
+      .right{justify-content:flex-start}
+      .character{margin-left:auto;margin-right:auto}
+    }
+
+    /* Footer styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      font-size: 15px;
+      z-index: 10;
+    }
+    @media (max-width:500px){
+      footer {
+        font-size: 12px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="scene" role="img" aria-label="Flat illustration of person working at a computer">
+    <div class="canvas">
+      <div class="left">
+        <div class="monitor" aria-hidden>
+          <div class="thumb">
+            <div class="img"></div>
+            <div class="lines">
+              <div class="line" style="width:80%"></div>
+              <div class="line" style="width:70%"></div>
+            </div>
+          </div>
+          <div class="small-row">
+            <div class="chip"></div>
+            <div class="chip" style="width:50%"></div>
+            <div class="chip" style="width:20%"></div>
+          </div>
+        </div>
+        <div class="chat-bubble">
+          "I'm a full-stack web developer with 2 months of experience creating elegant solutions to complex problems. My passion for technology drives me to continuously learn and implement the latest web technologies."
+        </div>
+      </div>
+      <div class="right">
+        <div class="character">
+          <div class="hair"></div>
+          <div class="head"></div>
+          <div class="neck"></div>
+          <div class="torso"></div>
+          <div class="arm left"></div>
+          <div class="arm right"></div>
+        </div>
+      </div>
+    </div>
+    <div class="desk" aria-hidden>
+      <div class="keyboard"></div>
+    </div>
+    <div class="splash"> About<br><br> me</div>
+  </div>
+  <footer>© 2025 Dev Portfolio. All rights reserved.</footer>
+</body>
+</html>

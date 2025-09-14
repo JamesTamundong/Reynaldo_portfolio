@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255,255,255,0.95);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .skill {
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 20px 15px;
+            text-align: center;
+            width: 160px;
+            transition: transform 0.2s;
+        }
+        .skill:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .skill img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+        .skill h2 {
+            font-size: 1.1em;
+            margin: 0;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+        @media (max-width: 700px) {
+            main {
+                padding: 15px 5px;
+            }
+            .skills {
+                gap: 16px;
+            }
+            .skill {
+                width: 120px;
+                padding: 12px 5px;
+            }
+            .skill img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Skills</h1>
+    </header>
+    <main>
+        <section class="skills">
+            <div class="skill">
+                <img src="https://skillforge.com/wp-content/uploads/2020/10/javascript-266x300.png" alt="JavaScript">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1200px-React_Logo_SVG.svg.png" alt="React">
+                <h2>React</h2>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+                <h2>CSS3</h2>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" alt="HTML5">
+                <h2>HTML5</h2>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python">
+                <h2>Python</h2>
+            </div>
+            <div class="skill">
+                <img src="https://avatars.githubusercontent.com/u/18133?s=200&v=4" alt="Git">
+                <h2>Git</h2>
+            </div>
+            <div class="skill">
+                <img src="https://www.opc-router.de/wp-content/uploads/2021/03/mongodb_thumbnail.png" alt="MongoDB">
+                <h2>MongoDB</h2>
+            </div>
+            <div class="skill">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPQrVFvoSObvpalOkOe7l24pzWpnY9BctpHg&s" alt="NodeJS">
+                <h2>NodeJS</h2>
+            </div>
+            <!-- Add more skills as needed -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Dev Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
